@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   {{>head}}
+   <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        {{>sideIndex}}
+        <div class="user">
+            <div class="user-login"> 
+                <img src="/public/images/download.png" alt="">
+                <h3>Sign into your account</h3>
+                <form action="/index" class="form-control" method="POST">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="enter email id" id="email" name="email">
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="enter password" id="password" name="password">
+                    <a href="">Forgot password</a>
+                    <input type="submit" value="Submit" class="submit">
+                    <p>-----or-----</p>
+                    <a href="/register" class="register">Register</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/public/js/login.js"></script>
+</body>
+</html>

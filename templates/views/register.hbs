@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>head}}
+    <title>registration</title>
+</head>
+<body>
+    <div class="container">
+        {{>sideIndex}}
+        <div class="user">
+            <div class="user-login"> 
+                <img src="/public/images/download.png" alt="">
+                <h3>Create your Account</h3>
+                <form action="/register" class="form-control" method="POST">
+                    <div class="box">
+                        <div class="box-content">
+                            <label for="firstname">First Name</label>
+                            <input type="text" placeholder="Enter your first name" id="firstname" name="firstname">
+                        </div>
+                        <div class="box-content">
+                            <label for="lastname">Last Name</label>
+                            <input type="text" placeholder="Enter your last name" id="lastname" name="lastname">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box-content">
+                            <label for="email">Email</label>
+                            <input type="email" placeholder="Enter your email id" id="email" name="email">
+                        </div>
+                        <div class="box-content">
+                            <label for="mobile">Mobile</label>
+                            <input type="text" placeholder="Enter your mobile number" id="mobile" name="mobile">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box-content">
+                            <label for="password">Password</label>
+                            <input type="password" placeholder="Enter your password" id="password" name="password">
+                        </div>
+                        <div class="box-content">
+                            <label for="confpass">Confirm Password</label>
+                            <input type="text" placeholder="Confirm your password" id="confpass" name="confpass">
+                        </div>
+                    </div>
+                    <input type="submit" value="Register" class="register-1">
+                    <span>already have an account <a href="/" style="margin: 0 .5rem; color:blue"> login </a> here</span>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

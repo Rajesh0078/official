@@ -7,7 +7,7 @@ const createUser = async(req,res) =>{
         const findUser = await User.findOne({email:email});
         if(!findUser){
             const newUser = await User.create(req.body)
-            res.send(newUser)
+            res.render("index")
         }
         else{
             res.json({
@@ -25,7 +25,7 @@ const userLogin = async(req,res)=>{
     const userEmail = await User.findOne({email:email})
     const userPass = await User.findOne({password:password})
     if(userEmail && userPass){
-        res.send(userEmail)
+        res.render("dashboard")
     }
     else{
         res.json({
