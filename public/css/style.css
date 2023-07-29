@@ -227,12 +227,21 @@ html{
     .container .user .user-login form .box .box-content{
         width: 100%;
         height: 85px;
+        position: relative;
+    }
+    .container .user .user-login form .box .box-content small{
+        position: absolute;
+        top: 90%;
     }
     .container .user .user-login form .box .box-content input{
         width: 100%;
     }
     .container .content .box .userImage{
         height: 20rem;
+    }
+    .container .user .user-login form .box .box-content i{
+        right: 5%;
+        top: 49%;
     }
     
 }
