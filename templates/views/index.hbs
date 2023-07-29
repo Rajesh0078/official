@@ -8,14 +8,15 @@
     <div class="container">
         {{>sideIndex}}
         <div class="user">
-            <div class="user-login"> 
+            <div class="user-login-1"> 
                 <img src="/public/images/download.png" alt="">
                 <h3>Sign into your account</h3>
-                <form action="/index" class="form-control" method="POST">
+                <form action="/index" class="form-control" method="POST" id="form-control">
                     <label for="email">Email</label>
-                    <input type="email" placeholder="enter email id" id="email" name="email">
+                    <input type="email" placeholder="enter email id" id="email" name="email" required>
                     <label for="password">Password</label>
-                    <input type="password" placeholder="enter password" id="password" name="password">
+                    <input type="password" placeholder="enter password" id="password" name="password" required>
+                    <small></small>
                     <a href="">Forgot password</a>
                     <input type="submit" value="Submit" class="submit">
                     <p>-----or-----</p>
@@ -25,6 +26,6 @@
         </div>
     </div>
 
-    <script src="/public/js/login.js"></script>
+   <script src="/public/js/login.js"></script>
 </body>
 </html>

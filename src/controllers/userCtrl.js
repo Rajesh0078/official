@@ -29,7 +29,7 @@ const userLogin = async(req,res)=>{
     }
     else{
         res.json({
-            msg:"user not found"
+            msg:"invalid credentials"
         })
     }
 }

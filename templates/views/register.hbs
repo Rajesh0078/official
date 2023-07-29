@@ -3,6 +3,7 @@
 <head>
     {{>head}}
     <title>registration</title>
+    <script src="https://kit.fontawesome.com/d2ea3cb570.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
@@ -14,32 +15,44 @@
                 <form action="/register" class="form-control" method="POST">
                     <div class="box">
                         <div class="box-content">
-                            <label for="firstname">First Name</label>
-                            <input type="text" placeholder="Enter your first name" id="firstname" name="firstname">
+                            <label for="firstname" >First Name</label>
+                            <input type="text" placeholder="Enter your first name" id="firstname" name="firstname" required>
+                            <i class="fas fa-times-circle success" ></i>
+                            <small></small>
                         </div>
                         <div class="box-content">
                             <label for="lastname">Last Name</label>
-                            <input type="text" placeholder="Enter your last name" id="lastname" name="lastname">
+                            <input type="text" placeholder="Enter your last name" id="lastname" name="lastname" required >
+                            <i class="fas fa-times-circle success" ></i>
+                            <small></small>
                         </div>
                     </div>
                     <div class="box">
                         <div class="box-content">
                             <label for="email">Email</label>
-                            <input type="email" placeholder="Enter your email id" id="email" name="email">
+                            <input type="email" placeholder="Enter your email id" id="email" name="email" required>
+                            <i class="fas fa-times-circle success" ></i>
+                            <small></small>
                         </div>
                         <div class="box-content">
                             <label for="mobile">Mobile</label>
-                            <input type="text" placeholder="Enter your mobile number" id="mobile" name="mobile">
+                            <input type="text" placeholder="Enter your mobile number" id="mobile" name="mobile" required>
+                            <i class="fas fa-times-circle success" ></i>
+                            <small></small>
                         </div>
                     </div>
                     <div class="box">
                         <div class="box-content">
                             <label for="password">Password</label>
-                            <input type="password" placeholder="Enter your password" id="password" name="password">
+                            <input type="password" placeholder="Enter your password" id="password" name="password" required>
+                            <i class="fas fa-times-circle success" ></i>
+                            <small></small>
                         </div>
-                        <div class="box-content">
+                        <div class="box-content" >
                             <label for="confpass">Confirm Password</label>
-                            <input type="text" placeholder="Confirm your password" id="confpass" name="confpass">
+                            <input type="password" placeholder="Confirm your password" id="confpass" name="confpass" required>
+                            <i class="fas fa-times-circle success" ></i>
+                            <small></small>
                         </div>
                     </div>
                     <input type="submit" value="Register" class="register-1">
@@ -48,5 +61,7 @@
             </div>
         </div>
     </div>
+
+    <script src="/public/js/register.js"></script>
 </body>
 </html>

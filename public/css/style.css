@@ -8,10 +8,13 @@
 }
 html{
     font-size: 62.5%;
+    overflow-x: hidden;
 }
 .container{
     display: flex;
     height: 100vh;
+    flex-wrap: wrap;
+    overflow-x: hidden;
 }
 .container .content{
     background: #fff5f2;
@@ -21,7 +24,6 @@ html{
 .container .content .box{
     display: flex;
     flex-direction: column;
-    
     align-items: center;
 }
 .container .content .box .card{
@@ -52,7 +54,50 @@ html{
 }
 .container .user{
     flex: 1 1 50rem;
-    
+    padding: 2rem 0;
+}
+.container .user .user-login-1{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 5rem;
+}
+.container .user .user-login-1 h3{
+    margin-top: 1.8rem;
+    font-size: 1.5rem;
+}
+.container .user .user-login-1 #form-control{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 85%;
+}
+.container .user .user-login-1 #form-control input{
+    width: 100%;
+    height: 5rem;
+    padding: 0 1rem;
+    margin: 1rem 0;
+    border:.1rem solid #aaa;
+}
+.container .user .user-login-1 #form-control label{
+    text-align: left;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+.container .user .user-login-1 #form-control .submit{
+    cursor: pointer;
+}
+.container .user .user-login-1 #form-control a{
+    margin: 1.5rem 0;
+    font-size: 1.3rem;
+}.container .user .user-login-1 #form-control p{
+    margin-top: 1rem;
+}
+.container .user .user-login-1 #form-control .register{
+    font-size: 2rem;
 }
 .container .user .user-login{
     display: flex;
@@ -119,9 +164,9 @@ html{
 .container .user .user-login form .box{
     display: flex;
     justify-content: center;
-    flex-wrap: nowrap;
-    max-width: 260rem;
+    flex-wrap: wrap;
     padding-left:5rem ;
+    width: 90%;
 }
 .container .user .user-login form  .register-1{
     transform: translateX(50%);
@@ -130,14 +175,64 @@ html{
     font-size: 2rem;
     cursor: pointer;
     width: 50%;
+    margin-top: 20px;
 }
 .container .user .user-login form .box .box-content {
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    position: relative;
+    flex-wrap: wrap;
     width: 50%;
+    height: 113px;
 }
 .container .user .user-login form .box .box-content input{
-    width: 88%;
+    width: 94%;
     border-radius: 0;
+}
+.container .user .user-login form .box .box-content input.active{
+    border: red .1rem solid;
+}
+.container .user .user-login form .box .box-content small{
+    font-size: 1.2rem;
+    color: red;
+    align-self: flex-start;
+    margin-top: 0px;
+}
+.container .user .user-login form .box .box-content i{
+    position: absolute;
+    top: 47%;
+    font-size: 2rem;
+    visibility: hidden;
+    right: 15%;
+    color: red;
+}
+.container .user .user-login form .box .box-content i.active{
+    visibility: visible;
+}
+
+
+
+@media screen and (max-width:560px) {
+    html{
+        font-size: 50%;
+    }
+    .container .content{
+        background: #fff5f2;
+        flex: 1 1 50rem;
+        display: none;
+    }
+    .container .user{
+        padding: 4rem 0;
+    }
+    .container .user .user-login form .box .box-content{
+        width: 100%;
+        height: 85px;
+    }
+    .container .user .user-login form .box .box-content input{
+        width: 100%;
+    }
+    .container .content .box .userImage{
+        height: 20rem;
+    }
+    
 }
