@@ -4,8 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/public/css/dashboard.css">
+    <script src="https://kit.fontawesome.com/d2ea3cb570.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h3>hi</h3>
+    <div class="container-pro">
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-bars-staggered" id="bars"></i>
+                <img src="/public/images/download.png" alt="" id="logo">
+            </div>
+            <nav>
+                <a href="" class="active"><i class="fas fa-th-large"></i><span class="nav-link">Dashboard</span></a>
+                <a href=""><i class="fas fa-user-friends"></i><span class="nav-link">Manage Resume</span></a>
+                <a href=""><i class="fas fa-briefcase"></i><span class="nav-link">Job Board</span></a>
+                <a href=""><i class="far fa-clock"></i><span class="nav-link">Applicaion Tracker</span></a>
+                <a href=""><i class="fas fa-clipboard-check"></i><span class="nav-link">Saved Jobs</span></a>
+                <a href=""><i class="fas fa-calculator"></i><span class="nav-link">Job Calculator</span></a>
+                <a href=""><i class="fas fa-medal"></i><span class="nav-link">Jobfairs</span></a>
+            </nav>
+        </div>
+        <section class="main">
+            <header>
+                <h3 class="head">Dashboard</h3>
+                <div class="icon">
+                    <span><i class="far fa-bell"></i></span>
+                    <span>username</span>
+                </div>
+            </header>
+        </section>
+    </div>
+    <script src="/public/js/dashboard.js"></script>
 </body>
 </html>

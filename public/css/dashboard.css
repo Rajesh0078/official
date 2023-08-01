@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .2s linear;
+    text-decoration: none;
+}
+:root{
+    --pink:#9316b7;
+    --lightblue:#182f60;
+    --dark:#192f60;
+    --shadow:0 3px 18px #0010650f;
+    --bg:#fafbfc;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+.container-pro{
+    display: flex;
+    position: relative;
+}
+.container-pro .sidebar{
+    padding: 2.8rem ;
+    position: fixed;
+    top: 0;
+}
+.container-pro .sidebar .logo i{
+    font-size: 2rem;
+    cursor: pointer;
+}
+.container-pro .sidebar .logo img{
+    vertical-align: middle;
+    width: 10rem;
+    height: 2rem;
+    margin-left: 2rem;
+    display: inline-block;
+}
+.container-pro .sidebar .logo img.active{
+    display: none;
+}
+.container-pro .sidebar nav{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+.container-pro .sidebar nav a{
+    color: var(--lightblue);
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+.container-pro .sidebar nav a.active{
+    background-color: #e5dde7;
+    color: var(--pink) !important;
+    
+    border-radius: 1rem;
+}
+.container-pro .sidebar nav i{
+    color: black;
+    margin-right: 1.5rem;
+}
+.container-pro .sidebar nav a span{
+    display: inline-block;
+}
+.container-pro .sidebar nav a span.active{
+    display: none;
+}
+.container-pro .main{
+    width: 100%;
+}
+.container-pro .main header{
+    position: fixed;
+    top: 0;
+    left: 20%;
+    background: var(--bg);
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}

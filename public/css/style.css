@@ -6,6 +6,11 @@
     border: none;
     outline: none;
 }
+:root{
+    --pink:#9316b7;
+    --lightblue:#182f60;
+    --dark:#192f60;
+}
 html{
     font-size: 62.5%;
     overflow-x: hidden;
