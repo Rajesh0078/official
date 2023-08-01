@@ -9,7 +9,8 @@
     --pink:#9316b7;
     --lightblue:#182f60;
     --dark:#192f60;
-    --shadow:0 3px 18px #0010650f;
+    --shadow:0 .6rem 2.2rem #0010650f;
+    --border:.1rem solid #e9ecf1;
     --bg:#fafbfc;
 }
 html{
@@ -18,16 +19,19 @@ html{
 }
 .container-pro{
     display: flex;
-    position: relative;
 }
 .container-pro .sidebar{
     padding: 2.8rem ;
     position: fixed;
     top: 0;
+    background: #fff;
+    z-index: 1000;
+    height: 100vh;
 }
 .container-pro .sidebar .logo i{
     font-size: 2rem;
     cursor: pointer;
+    padding: .5rem .8rem;
 }
 .container-pro .sidebar .logo img{
     vertical-align: middle;
@@ -53,7 +57,6 @@ html{
 .container-pro .sidebar nav a.active{
     background-color: #e5dde7;
     color: var(--pink) !important;
-    
     border-radius: 1rem;
 }
 .container-pro .sidebar nav i{
@@ -68,15 +71,154 @@ html{
 }
 .container-pro .main{
     width: 100%;
+    position: relative;
 }
 .container-pro .main header{
+    left: 25rem;
+    background: var(--bg);
     position: fixed;
     top: 0;
-    left: 20%;
-    background: var(--bg);
     right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1.5rem;
+    padding:1rem  1.5rem;
+    box-shadow: var(--shadow);
+    z-index: 100;
+    border-bottom: var(--border);
+}
+.container-pro .main header.active{
+    left: 10rem !important;
+}
+.head{
+    font-size: 2.4rem;
+    color: var(--dark);
+    margin-left: 2.5rem;
+}
+.container-pro .main header .icon i{
+    color: var(--lightblue);
+    font-size: 2rem;
+    border: var(--border);
+    border-radius: 50%;
+    padding: 1rem;
+    background: #fff;
+    margin-right: 1.3rem;
+}
+.container-pro .main header .icon .username{
+    font-size: 1.8rem;
+    border: var(--border);
+    padding: .9rem;
+    border-radius: 2rem;
+    background: #fff;
+}
+.container-pro .main .hero{
+    position: absolute;
+    left: 26rem;
+    right: 0;
+    margin-top: 6rem;
+    background: var(--bg);
+    padding: 2.5rem 2.8rem;
+}
+.container-pro .main .hero.active{
+    left: 11rem;
+}
+.container-pro .main .hero .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: .5fr .8fr 2fr;
+    grid-template-areas: "box-1 box-2 box-3 box-4"
+                        "long long long long" 
+                        "half-1 half-1 half-2 half-2";
+    z-index: 100;
+    grid-gap: 2rem;
+}
+.container-pro .main .hero .grid-container .card{
+    background: #fff;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+}
+.container-pro .main .hero .grid-container .box-1{
+    grid-area: box-1;
+}
+.container-pro .main .hero .grid-container .box-2{
+    grid-area: box-2;
+}
+.container-pro .main .hero .grid-container .box-3{
+    grid-area: box-3;
+}
+.container-pro .main .hero .grid-container .box-4{
+    grid-area: box-4;
+}
+.container-pro .main .hero .grid-container .long{
+    grid-area: long;
+}
+.container-pro .main .hero .grid-container .half-1{
+    grid-area: half-1;
+    width: 100%;
+}
+.container-pro .main .hero .grid-container .half-2{
+    grid-area: half-2;
+    width: 100%;
+}
+
+
+.container-pro .main .hero .grid-container .card .text{
+    font-size: 1.7rem;
+}
+.container-pro .main .hero .grid-container .card .text p{
+    font-size: 3rem;
+    margin-top: 3.7rem;
+}
+.container-pro .main .hero .grid-container .card .text i{
+    margin-right: 1rem;
+    color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:991px) {
+    .container-pro .main .hero .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: .5fr .5r 2fr 2fr 2fr;
+        grid-template-areas: "box-1 box-2" "box-3 box-4"
+                            "long long" 
+                            "half-1 half-1" " half-2 half-2";
+        z-index: 100;
+        grid-gap: 2rem;
+    }
+}
+@media screen and (max-width:991px) {
+    .container-pro .main .hero .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: .5fr .5r 2fr 2fr 2fr;
+        grid-template-areas: "box-1 box-2" "box-3 box-4"
+                            "long long" 
+                            "half-1 half-1" " half-2 half-2";
+        z-index: 100;
+        grid-gap: 2rem;
+    }
 }
