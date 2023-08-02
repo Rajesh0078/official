@@ -28,6 +28,13 @@ html{
     z-index: 1000;
     height: 100vh;
 }
+.container-pro .sidebar .logo span{
+    font-size: 2rem;
+    vertical-align: middle;
+    margin-left: 10rem;
+    display: none;
+    cursor: pointer;
+}
 .container-pro .sidebar .logo i{
     font-size: 2rem;
     cursor: pointer;
@@ -90,10 +97,18 @@ html{
 .container-pro .main header.active{
     left: 10rem !important;
 }
+.container-pro .main header .top i{
+    vertical-align: middle;
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    display: none;
+}
 .head{
     font-size: 2.4rem;
     color: var(--dark);
-    margin-left: 2.5rem;
+    display: inline-block;
+    margin-left: 1.5rem;
+    vertical-align: middle;
 }
 .container-pro .main header .icon i{
     color: var(--lightblue);
@@ -210,15 +225,45 @@ html{
         grid-gap: 2rem;
     }
 }
-@media screen and (max-width:991px) {
+@media screen and (max-width:768px) {
+    html{
+        font-size: 50%;
+    }
+    .container-pro .sidebar{
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+    .container-pro .sidebar.active{
+        transform: scaleX(1);
+    }
+    .container-pro .main .hero{
+        left: 0;
+     
+    }
+    .container-pro .main header{
+        left: 0;
+    }
+    .container-pro .main header .top i{
+        display: inline-block;
+        cursor: pointer;
+    }
+    .container-pro .sidebar .logo i{
+        display: none;
+    }
+    
+    .container-pro .sidebar {
+        background: #fff;
+    }
+    .container-pro .sidebar .logo span{
+        display: inline-block;
+    }
+}
+@media screen and (max-width:360px){
     .container-pro .main .hero .grid-container{
-        display: grid;
-        grid-template-columns: 1fr 1fr ;
-        grid-template-rows: .5fr .5r 2fr 2fr 2fr;
-        grid-template-areas: "box-1 box-2" "box-3 box-4"
-                            "long long" 
-                            "half-1 half-1" " half-2 half-2";
-        z-index: 100;
-        grid-gap: 2rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: .5fr .5fr .5fr .5fr 3fr 2.5fr 2.5fr;
+        grid-template-areas: "box-1" "box-2" "box-3" "box-4"
+                            "long" 
+                            "half-1" "half-2";
     }
 }
