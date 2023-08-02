@@ -261,7 +261,7 @@ html{
 @media screen and (max-width:360px){
     .container-pro .main .hero .grid-container{
         grid-template-columns: 1fr;
-        grid-template-rows: .5fr .5fr .5fr .5fr 3fr 2.5fr 2.5fr;
+        grid-template-rows: .8fr .8fr .8fr .8fr 3fr 2.5fr 2.5fr;
         grid-template-areas: "box-1" "box-2" "box-3" "box-4"
                             "long" 
                             "half-1" "half-2";
