@@ -32,6 +32,12 @@ app.get("/",(req,res)=>{
 app.get("/register",(req,res)=>{
     res.render("register")
 })
+app.get("/dashboard",(req,res)=>{
+    res.render("dashboard")
+})
+app.get("/board",(req,res)=>{
+    res.render("board")
+})
 
 app.use("", authRouter)
 

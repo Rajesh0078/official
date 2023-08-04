@@ -1,0 +1,72 @@
+:root{
+    --pink:#9316b7;
+    --lightblue:#182f60;
+    --dark:#192f60;
+    --shadow:0 .6rem 2.2rem #0010650f;
+    --border:.1rem solid #e9ecf1;
+    --bg:#fafbfc;
+}
+.board-hero{
+    position: absolute;
+    left: 26.5rem;
+    top: 6.4rem;
+    width: 100%;
+    height: 100%;
+    background: var(--bg);
+}
+.board-hero .board-grid{
+    display: grid;
+    grid-template-columns: .3fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "filter filter" "job detail";
+}
+.board-hero .board-grid .board-filter{
+    grid-area: filter;
+    padding: 2rem 2.5rem;
+    position: relative;
+}
+.board-hero .board-grid .board-filter .board-location{
+    position: absolute;
+    padding: 1.5rem  ;
+    background: #fff;
+    left: 20%;
+    top: 80%;
+    border: var(--border);
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    display: none;
+    
+}
+.board-hero .board-grid .board-filter .board-location.active{
+    display: block;
+}
+.board-hero .board-grid .board-filter .board-location .box-container{
+    overflow-y: scroll;
+    height: 20rem;
+    text-transform: capitalize;
+}
+.board-hero .board-grid .board-filter .board-location .box-1 {
+    padding: .8rem 0;
+    font-size: 1.3rem;
+}
+.board-hero .board-grid .board-filter .board-location .box-1 input{
+    vertical-align: middle;
+    margin-right: 1rem;
+}
+.board-hero .board-grid .board-filter .board-location #location-input{
+    padding: .8rem 1.2rem;
+    border: 1px solid #aaa;
+    outline: none;
+}
+.board-hero .board-grid .board-filter span{
+    font-size: 1.5rem;
+    margin: 0 1.5rem;
+    color: var(--lightblue);
+    cursor: pointer;
+}
+.board-hero .board-grid .board-nav-list{
+    grid-area: job;
+}
+.board-hero .board-grid .board-job-details{
+    grid-area: detail;
+}
