@@ -70,3 +70,22 @@
 .board-hero .board-grid .board-job-details{
     grid-area: detail;
 }
+
+
+@media screen and (max-width:768px){
+    .board-hero{
+        left: 0;
+    }
+    .board-hero .board-filter{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 1.3rem;
+    }
+    .board-hero .board-grid .board-filter .board-location{
+        top: 20%;
+        left: 40%;
+    }
+    
+    
+}
