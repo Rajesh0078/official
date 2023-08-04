@@ -50,7 +50,7 @@ const locationInput = document.querySelector("#location-input")
 
 locationInput.addEventListener("keyup", () => {
     let location2 = locationInput.value.toUpperCase()
-    const box = document.querySelectorAll(".box")
+    const box = document.querySelectorAll(".box-1")
    
     for(let i=0; i<avialableLocations.length; i++){
         let match = box[i].getElementsByTagName("label")[0]
