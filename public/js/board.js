@@ -76,11 +76,15 @@ locationBtn.onclick =() =>{
 
 const filterBtn = document.querySelector(".filter-btn")
 const filterdown = document.querySelector(".filter-dropdown")
+const boardNavListBtn = document.querySelector("#board-nav-list")
 
 filterBtn.onclick = () =>{
     filterdown.classList.toggle("active")
 }
-
+boardNavListBtn.onclick = ()=>{
+    filterdown.classList.remove("active")
+    boardLocation.classList.remove("active")
+}
 
 /*  loaction search script ends  */ 
 
