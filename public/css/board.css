@@ -16,14 +16,17 @@
 }
 .board-hero .board-grid{
     display: grid;
-    grid-template-columns: .3fr 1fr;
+    grid-template-columns: .6fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "filter filter" "job detail";
 }
 .board-hero .board-grid .board-filter{
     grid-area: filter;
-    padding: 2rem 2.5rem;
+    padding: 2.5rem 2.5rem;
     position: relative;
+}
+.board-hero .board-grid .board-filter .filter-dropdown{
+    display: inline-block;
 }
 .board-hero .board-grid .board-filter .board-location{
     position: absolute;
@@ -70,6 +73,52 @@
 .board-hero .board-grid .board-job-details{
     grid-area: detail;
 }
+.board-nav-list .list-container .list{
+    display: flex;
+    align-items: center;
+    border-bottom: var(--border);
+    border-top: var(--border);
+}
+.board-nav-list .list-container .list h2{
+    font-size: 3rem;
+    padding: 1.3rem 2rem;
+    background: #182f60;
+    border-radius: 50%;
+    color: #fff;
+    margin: 2rem;
+}
+.board-nav-list .list-container .list h3{
+    font-size: 2rem;
+    padding: .5rem 0;
+    color: var(--lightblue);
+}
+.board-nav-list .list-container .list span{
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+.board-nav-list .list-container .list p{
+    padding: .5rem 0;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media screen and (max-width:768px){
@@ -86,6 +135,21 @@
         top: 20%;
         left: 30%;
     }
+    .board-hero .board-grid .board-filter .filter-dropdown{
+        display: none;
+    }
+    .board-hero .board-grid .board-filter .filter-dropdown.active{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
     
-    
+}
+@media screen and (max-width:768px){
+    .board-hero .board-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "filter" "job" "detail";
+    }
 }

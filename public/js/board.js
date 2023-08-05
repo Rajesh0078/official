@@ -26,7 +26,7 @@ xMark.onclick = () => {
 const avialableLocations = [
     'hyderabad', 'rajahmundry', 'kakinada', 'chennai', 'delhi', 'noida', 'tirupathi', 'bangalore', 'pune', 'agra', 'vijayawada', 'ahmedabad', 'vizag', "Kurnool",
     "Machilipatnam",
-    "Nagarjunakoṇḍa",
+    "Nagarjunakoṇḍa","kolkata",
     "Srikakulam", "Visakhapatnam",
     "Vizianagaram",
     "Yemmiganur","tamarada"
@@ -39,6 +39,7 @@ avialableLocations.map((location) => {
     div.className = "box-1"
     const input = document.createElement("input")
     input.setAttribute("type", "checkbox")
+    input.setAttribute("id", "check-Input")
     const label = document.createElement("label")
     label.innerText = location
     div.appendChild(input)
@@ -73,5 +74,49 @@ locationBtn.onclick =() =>{
     boardLocation.classList.toggle("active")
 } 
 
+const filterBtn = document.querySelector(".filter-btn")
+const filterdown = document.querySelector(".filter-dropdown")
+
+filterBtn.onclick = () =>{
+    filterdown.classList.toggle("active")
+}
+
 
 /*  loaction search script ends  */ 
+
+const checkBtn = document.querySelectorAll("#check-Input")
+let locationRaj ;
+const list = document.querySelectorAll(".list")
+
+function showResult(){
+    for(let i=0; i<list.length; i++){
+        let match = list[i].getElementsByClassName("location-list")[0]
+        let text = match.textContent.toLocaleUpperCase()
+        if(match){
+            if(text.includes(locationRaj)){
+                list[i].style.display = ""
+                console.log(locationRaj)
+            }
+            else{
+                list[i].style.display = "none"
+            }
+        }
+    }
+}
+
+checkBtn.forEach((e)=>{
+    e.onchange = () =>{
+        if(e.checked == true){
+            locationRaj = e.nextSibling.innerText.toUpperCase()
+            showResult();
+        }
+        else{
+            list.forEach((listx)=>{
+                listx.style.display = ""
+            })
+        }
+    }
+})
+
+
+
